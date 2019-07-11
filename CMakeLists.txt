@@ -4,7 +4,7 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 option(USE_AVX2 "USE AVX2 instuctions" OFF)
 find_package(Eigen3 REQUIRED CONFIG)
-message(STATUS "Eigen3 found, version ${eigen3_VERSION}")
+message(STATUS "Eigen3 found, version ${Eigen3_VERSION}")
 
 add_executable(eigen_perf_test eigen_perf_test.cpp)
 target_link_libraries(eigen_perf_test Eigen3::Eigen)

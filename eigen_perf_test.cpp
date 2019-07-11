@@ -21,6 +21,7 @@ int main()
             A += tmp.transpose() * tmp;
         }
         Matrix<float, 6, 1> x = A.llt().solve(b);
+        cout << "Result: " << x.transpose() << endl;
         duration<double> diff = steady_clock::now() - start_t;
 #if __clang__
         cout << "compiler is Clang, version " << __clang_major__ << "." << __clang_minor__ << "." << __clang_patchlevel__ << endl;
@@ -29,7 +30,7 @@ int main()
 #elif __GNUC__
         std::cout << "compiler is GNUC(gcc), version " << __GNUC__ << "." << __GNUC_MINOR__ << endl;
 #endif
-        cout << num_iter << " iteration took " << diff.count() << endl;
+        cout << num_iter << " iteration took " << diff.count() << " seconds" << endl << endl;
     }
     return 0;
 }
