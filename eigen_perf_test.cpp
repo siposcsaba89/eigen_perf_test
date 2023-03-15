@@ -9,7 +9,7 @@ using namespace Eigen;
 
 int main()
 {
-    const vector<size_t> num_mat_multiplication = { 10000, 100000, 1000000 };
+    const vector<size_t> num_mat_multiplication = { 10000, 100000, 1000000, 10000000 };
     for (auto num_iter : num_mat_multiplication)
     {
         auto start_t = steady_clock::now();
